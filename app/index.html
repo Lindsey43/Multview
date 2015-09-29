@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app ="ToDo">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular ToDo List</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+
+    </head>  
+  
+<body>
+     <!--Header--> 
+<div class="container">
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" ui-sref="main">list-1</a>
+                </div>
+        <ul class="nav nav-tabs">
+            <li><a ui-sref="list-2">List 2</a></li>
+            <li><a ui-sref="list-3">List 3</a></li>
+        </ul>
+    </nav>
+
+    <!-- <h1>TODO List</h1>-->
+
+<!--
+    <script type="text/ng-template" id="main.html">
+        <input type="text" ng-model="NewTodo.text" placeholder="What needs to be done?"></input>
+        <button ng-click="addTodo()">Add</button>
+
+        <ul ng-init="defaults =['Apple','Peach', 'Grapes']">
+            <li ng-repeat="default in defaults">
+                {{default}}
+                <button ng-click="removeDefault($index)" aria-label="Remove">Delete</button>
+            </li>
+
+            <li ng-repeat="todo in ToDos">
+                {{todo.text}}
+
+                <button ng-click="removeTodo($index)" aria-label="Remove">Delete</button>
+
+            </li>
+        </ul>
+    </script>
+-->
+    <div ui-view></div>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="../bower_components/ngstorage/ngStorage.js"></script>
+    <script src="script/app.js"></script>
+    <script src="controllers/main-controller.js"></script>
+     <script src="controllers/list-2-controller.js"></script>
+     <script src="controllers/list-3-controller.js"></script>
+</body>
+</html>
